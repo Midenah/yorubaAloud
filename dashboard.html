@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+   <link
+   href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+   rel="stylesheet"
+    />
+<link rel="stylesheet" href="dashbboard.css">
+  </head>
+  <body>
+    <main>
+      <nav>
+        <div class="logo">
+          <i class="fab fa-odnoklassniki fa-lg"></i>
+          <span>Yoruba Aloud</span>
+        </div>
+        <ul>
+          <li>
+            <a href="#">
+              <i class="bx bx-home"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-category"></i>
+              <p>Categories</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-book-content"></i>
+              <p>Learning Materials</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bx-certification"></i>
+              <p>Quiz</p> 
+            </a>       
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bxs-id-card"></i>
+              <p>Admin Profile</p> 
+            </a>       
+          </li>
+          <li>
+            <a href="#">
+              <i class="bx bxs-log-out-circle"></i>
+            <p>Logout</p> 
+            </a>       
+          </li>       
+        </ul>
+      </nav>
+      <aside>
+        <div class="bar">
+          <i class="fa-solid fa-bars" id="menu"></i>
+          <h2 class="user-admin" id="adminUserName"></h2>
+        </div>
+        <div class="card-container">
+          <div class="box">
+            <div class="card">
+              <i class="fa-solid fa-lines-leaning fa-flip-horizontal"></i>
+              <h3>Total Categories</h3>
+            </div>
+            <div class="card">
+              <i class='bx bx-book-content'></i>
+              <h3>Learning Materials</h3>
+            </div>
+            <div class="card">
+              <i class="fa-solid fa-lines-leaning fa-flip-horizontal"></i>
+              <h3>Total Sub-Categories</h3>
+            </div>
+          </div>
+          <div class="box">
+          <div class="card">
+            <i class="bx bx-certification"></i>
+            <h3>Total Quiz</h3>
+          </div>
+          <div class="card"> 
+            <i class='bx bxs-graduation'></i>
+            <h3>Total Student</h3>
+          </div>
+          <div class="btn">
+            <button>Top 3 Three </button>
+          </div>
+          </div>
+        </div>
+        
+        <div id="pageModal">      
+            <svg
+            class="pl"
+            viewBox="0 0 200 200"
+            width="200"
+            height="200"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient id="pl-grad1" x1="1" y1="0.5" x2="0" y2="0.5">
+                <stop offset="0%" stop-color="#808080" />
+                <stop offset="100%" stop-color="hsl(223,90%,55%)" />
+              </linearGradient>
+              <linearGradient id="pl-grad2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#808080" />
+                <stop offset="100%" stop-color="hsl(223,90%,55%)" />
+              </linearGradient>
+            </defs>
+            <circle
+              class="pl__ring"
+              cx="100"
+              cy="100"
+              r="82"
+              fill="none"
+              stroke="url(#pl-grad1)"
+              stroke-width="36"
+              stroke-dasharray="0 257 1 257"
+              stroke-dashoffset="0.01"
+              stroke-linecap="round"
+              transform="rotate(-90,100,100)"
+            />
+            <line
+              class="pl__ball"
+              stroke="url(#pl-grad2)"
+              x1="100"
+              y1="18"
+              x2="100.01"
+              y2="182"
+              stroke-width="36"
+              stroke-dasharray="1 165"
+              stroke-linecap="round"
+            />
+            </svg>
+        </div>
+
+        <div id="studentModal">
+          <div id="studentModalTitle">
+            <span>Top Three Students</span>
+            <i class="bx bx-x" onclick="closeStudentModal()"></i>
+          </div>
+          <div id="topThreeScores"></div>
+        </div>
+
+      <!-- //All Students Table -->
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+              <th>Position</th>
+              <th>Total Score</th>
+            </tr>
+          </thead>
+          <tbody id="allStudents">
+            
+          </tbody>
+        </table>
+      </div>
+      </aside>
+    </main>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./dashboard.js"></script>
+  </body>
+</html>

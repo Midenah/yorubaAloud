@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Short+Stack&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Short Stack", cursive;
+}
+body{
+  background: var(--YA-white);
+  overflow-x: hidden;
+  height: 100vh;
+}
+main{
+  display: flex;
+  width: 100%;
+  gap: 1.2rem;
+}
+nav{
+  position: absolute;
+  background: #4899f0;
+  color: #ffffff;
+  padding:3rem 1rem;
+  align-items: center;
+  width: 20%;
+  height: 100vh;
+  left: 1001%;
+  transition: 0.3s ease;  
+}
+.open{
+  right: 5%;
+}
+.logo{
+  display: flex;
+  gap:20px;
+  align-items: center;
+}
+.logo i{
+  font-size: 24px;
+}
+.logo span {
+  font-size: 18px;
+  font-weight: 500;
+}
+@media screen and (max-width:768px){
+  span {
+    display: none;
+  }
+}
+nav ul{
+  margin-top: 5rem;
+}
+nav li{
+  list-style: none;
+  margin-bottom: 2.5rem;
+}
+@media screen and (max-width:768px){
+  nav li:hover {
+    width: 300%;   
+  }
+}
+  @media screen and (max-width:768px){
+    nav li p {
+      display: none;
+    }
+  }
+  nav li a{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  list-style: none;
+  color: #ffffff;
+  text-decoration: none;
+  }
+  nav li a:hover{
+    background: #ffffff;
+    color: #4899f0;
+    width: 108%;
+    padding: 0.6rem 0.2rem;
+    border-radius: 20px;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    cursor: pointer;
+  }
+aside{
+  margin-top: 3rem;
+  width: 70%;
+}
+.bar{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5rem;
+}
+#menu{
+  font-size: 22px;
+  color: #4899f0;
+  cursor: pointer;
+}
+.box{
+  display: flex; 
+  margin-bottom: 3rem;
+  gap:1rem ;
+}
+.card{
+  align-items: center;
+  border: 1px solid #eceaea;
+  padding:  2.5rem;
+  padding-left: 0.5rem;
+  width:30%;
+  border-radius: 10px;
+  box-shadow: 2px 3px#e4e2e2;
+}
+@media screen and (max-width:768px){
+  .card {
+    font-size: 14px;
+  }
+}
+.card i{
+  color: #4899f0;
+  font-size: 20px;
+}
+.btn{
+  text-align: center;
+  border: 1px solid #eceaea;
+  padding: 2.5rem;
+  width:30%;
+  border-radius: 10px;
+  box-shadow: 2px 3px#e4e2e2;
+  justify-content: center;
+}
+.btn button{
+  background: #4899f0;
+  color: #ffffff;
+  padding: 0.6rem 2rem;
+  border: none;
+  border-radius: 10px;
+}
