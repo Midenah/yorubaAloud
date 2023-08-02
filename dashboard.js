@@ -1,19 +1,19 @@
 function dashboard() {
-    const item = document.querySelector("a");
-    item.classList.add("active");
+    const logo = document.querySelector("a");
+    logo.classList.add("active");
   }
   
   // TOGGLE SIDEBAR
-  const menuBar = document.querySelector("aside .bar .fa-solid fa-bars");
-  const navBar = document.querySelector("nav");
+  const menuBar = document.querySelector("aside nav .bx.bx-menu");
+  const navBar = document.querySelector("section");
   
   menuBar.addEventListener("click", function () {
-    navBar.classList.toggle(".open");
+    navBar.classList.toggle("hide");
   });
   
   //FUNCTION THAT GETS AND DISPLAYS DASHBOARD INFORMATION
   
-  function dashboardInf() {
+  function dashboardInfo() {
     const pageModal = document.getElementById("pageModal");
     pageModal.style.display = "flex";
   
@@ -60,7 +60,7 @@ function dashboard() {
       .catch((error) => console.log("error", error));
   }
   
-  getDashboardInformation();
+  dashboardInfo();
   
   //FUNCTION THAT TO SHOW STUDENT MODAL
   

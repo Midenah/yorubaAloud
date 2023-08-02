@@ -15,16 +15,15 @@
 <link rel="stylesheet" href="dashbboard.css">
   </head>
   <body>
-    <main>
-      <nav>
-        <div class="logo">
+    <section>
+        <a href="dashboard.html" class="logo">
           <i class="fab fa-odnoklassniki fa-lg"></i>
           <span>Yoruba Aloud</span>
-        </div>
+        </a>
         <ul>
           <li>
             <a href="#">
-              <i class="bx bx-home"></i>
+              <i class="bx bx-home" ></i>
               <p>Dashboard</p>
             </a>
           </li>
@@ -59,14 +58,18 @@
             </a>       
           </li>       
         </ul>
+    </section>
+    <!-- content -->
+    <aside>
+      <!-- nav -->
+      <nav>
+        <i class="bx bx-menu"></i>
+        <span class="user" id="adminUserName"></span>
       </nav>
-      <aside>
-        <div class="bar">
-          <i class="fa-solid fa-bars" id="menu"></i>
-          <h2 class="user-admin" id="adminUserName"></h2>
-        </div>
+
+      <!-- main -->
+      <main>
         <div class="card-container">
-          <div class="box">
             <div class="card">
               <i class="fa-solid fa-lines-leaning fa-flip-horizontal"></i>
               <h3>Total Categories</h3>
@@ -79,8 +82,6 @@
               <i class="fa-solid fa-lines-leaning fa-flip-horizontal"></i>
               <h3>Total Sub-Categories</h3>
             </div>
-          </div>
-          <div class="box">
           <div class="card">
             <i class="bx bx-certification"></i>
             <h3>Total Quiz</h3>
@@ -89,9 +90,8 @@
             <i class='bx bxs-graduation'></i>
             <h3>Total Student</h3>
           </div>
-          <div class="btn">
+          <div class="card">
             <button>Top 3 Three </button>
-          </div>
           </div>
         </div>
         
@@ -160,13 +160,12 @@
               <th>Total Score</th>
             </tr>
           </thead>
-          <tbody id="allStudents">
-            
+          <tbody id="allStudents">  
           </tbody>
         </table>
       </div>
+      </main>
       </aside>
-    </main>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./dashboard.js"></script>
   </body>
