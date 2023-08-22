@@ -92,19 +92,14 @@ aside{
   left: 280px;
   transition: 0.3s ease;
 }
+.shift{
+  left: 70px;
+}
 @media screen and (max-width: 768px) {
 aside {
   width: calc(100% - 60px);
   left: 200px;
 }
-}
-
-/* #content nav .nav-link {
-  display: none;
-} */
-section .hide ~ aside{
-  width: calc(100% - 60px);
-  left: 60px;
 }
 aside nav{
   background-color: #ffffff;
@@ -112,22 +107,12 @@ aside nav{
   padding: 0 24px;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items:center;
   grid-gap: 24px;
   position: sticky;
   top: 0;
   left: 0;
-  z-index: 1000;
-}
-aside nav::before{
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  bottom: -40px;
-  left: 0;
-  border-radius: 50%;
-  box-shadow: -20px -20px 0 var(--light);
+
 }
 aside nav i {
   cursor: pointer;
@@ -142,7 +127,6 @@ main{
   position: relative;
   width: 100%;
   padding: 36px 10px;
-  font-family: var(--poppins);
 }
 main .card-container{
   display: grid;
@@ -155,7 +139,7 @@ main .card-container{
 @media screen and (max-width: 768px) {
    main .card-container {
     grid-template-columns: repeat(1, 1fr);
-    padding: 10px 0px;
+    padding: 10px 10px;
   }
 }
 .card-container .card{
@@ -163,11 +147,15 @@ main .card-container{
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 20px;
+  padding: 25px;
   border-radius: 10px;
-  width: 300px;
-  height: 160px;
+  width: 90%;
   box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 768px) {
+  .card-container .card{
+    width: 60%;
+  }
 }
 .card-container .card i{
   color: #4899f0;
@@ -198,4 +186,27 @@ main .card-container{
 .card:last-of-type button:hover{
   cursor: pointer;
   outline: 5px solid #4899f0;
+}
+.table {
+  overflow: scroll;
+  width: 100%;
+}
+table {
+  margin-top: 3rem;
+  width: 100%;
+  border-collapse: collapse;
+  padding: 2rem;
+  border: 1;
+  text-align: center;
+}
+
+ table tr th,
+table tr td {
+  border: 1px solid #000;
+  padding: 12px 7px;
+}
+
+table th {
+  background: #4899f0;
+  color: #ffffff;
 }

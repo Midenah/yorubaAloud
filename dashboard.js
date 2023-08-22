@@ -6,9 +6,11 @@ function dashboard() {
   // TOGGLE SIDEBAR
   const menuBar = document.querySelector("aside nav .bx.bx-menu");
   const navBar = document.querySelector("section");
+  const menu =document.querySelector("aside")
   
   menuBar.addEventListener("click", function () {
     navBar.classList.toggle("hide");
+    menu.classList.toggle("shift")
   });
   
   //FUNCTION THAT GETS AND DISPLAYS DASHBOARD INFORMATION
