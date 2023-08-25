@@ -10,8 +10,9 @@ function dashboard() {
   
   menuBar.addEventListener("click", function () {
     navBar.classList.toggle("hide");
-    menu.classList.toggle("shift")
+    menu.classList.toggle("shift");
   });
+    const getName = document.getElementById("adminUserName")
   
   //FUNCTION THAT GETS AND DISPLAYS DASHBOARD INFORMATION
   
@@ -53,15 +54,14 @@ function dashboard() {
         getSubCategory.innerHTML = `${result.total_number_of_subcategories}`;
         getTotalQuiz.innerHTML = `${result.total_number_of_quize}`;
         getTotalStudents.innerHTML = `${result.total_number_of_students}`;
-        getAdminName.innerHTML = `${result.admin_name
-          .charAt(0)
-          .toUpperCase()}${result.admin_name.slice(1)}`;
+        getAdminName.innerHTML = `${result.admin_name}`;
+          
   
         pageModal.style.display = "none";
       })
       .catch((error) => console.log("error", error));
   }
-  
+
   dashboardInfo();
   
   //FUNCTION THAT TO SHOW STUDENT MODAL

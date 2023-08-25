@@ -28,7 +28,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="categories.html">
               <i class="bx bx-category"></i>
               <p>Categories</p>
             </a>
@@ -73,46 +73,62 @@
             <div class="card">
               <i class="fa-solid fa-lines-leaning fa-flip-horizontal"></i>
               <h3>Total Categories</h3>
+              <h3 id="category"></h3>
             </div>
             <div class="card">
               <i class='bx bx-book-content'></i>
               <h3>Learning Materials</h3>
+              <h3 id="learningMaterials"></h3>
             </div>
             <div class="card">
               <i class="fa-solid fa-lines-leaning fa-flip-horizontal"></i>
               <h3>Total Sub-Categories</h3>
+              <h3 id="subCategories"></h3>
             </div>
           <div class="card">
             <i class="bx bx-certification"></i>
             <h3>Total Quiz</h3>
+            <h3 id="totalQuiz"></h3>
           </div>
           <div class="card"> 
             <i class='bx bxs-graduation'></i>
             <h3>Total Student</h3>
+            <h3 id="totalStudents"></h3>
           </div>
           <div class="card">
             <button>Top 3 Three </button>
+            <span id="topThreeStudent"></span>
           </div>
         </div>
         
         <div id="pageModal">      
-          <div class="table">
-            <table>
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Phone Number</th>
-                  <th>Position</th>
-                  <th>Total Score</th>
-                </tr>
-              </thead>
-              <tbody id="allStudents">  
-              </tbody>
-            </table>
-          </div>
+        
+      
         </div>
-      <!-- //All Students Table -->
+         <!-- //All Students Table -->
+        <div id="studentModal">
+          <div id="studentModalTitle">
+            <span>Top Three Students</span>
+            <i class="bx bx-x" onclick="closeStudentModal()"></i>
+          </div>
+          <div id="topThreeScores"></div>
+         </div>
+
+      <div class="table">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Phone Number</th>
+              <th>Position</th>
+              <th>Total Score</th>
+            </tr>
+          </thead>
+          <tbody id="allStudents">  
+          </tbody>
+        </table>
+      </div>
       </main>
       </aside>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
